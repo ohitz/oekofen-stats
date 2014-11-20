@@ -210,7 +210,7 @@ function op_graphs()
 tmpfile=`mktemp`
 workdir=/usr/local/oekofen-stats
 rrddir=$workdir/rrd
-webdir=/var/www/oekofen
+webdir=$workdir/web
 
 case "$1" in
   update)
