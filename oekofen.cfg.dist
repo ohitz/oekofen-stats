@@ -1,0 +1,31 @@
+
+[default]
+
+# URL of the OekoFEN smart controller
+controller_url          = "http://pellematic.local"
+
+# Username and password
+controller_user         = "oekofen"
+controller_password     = "oekofen"
+
+[variables]
+
+outside_temp            = "CAPPL:LOCAL.L_aussentemperatur_ist"
+solar_panel_temp        = "CAPPL:LOCAL.L_sk[0].kollektortemp_ist"
+solar_buffer_temp       = "CAPPL:LOCAL.L_sk[0].speichertemp_ist"
+solar_pump_pct          = "CAPPL:LOCAL.L_sk[0].pumpe"
+water_pump_pct          = "CAPPL:LOCAL.L_ww[0].pumpe"
+buffer_top_temp         = "CAPPL:LOCAL.L_pu[0].einschaltfuehler_ist"
+buffer_mid_temp         = "CAPPL:LOCAL.L_pu[0].ausschaltfuehler_ist"
+solar_flow_temp         = "CAPPL:LOCAL.L_ertrag[0].vorlauftemp_ist"
+solar_return_temp       = "CAPPL:LOCAL.L_ertrag[0].ruecklauftemp_ist"
+solar_flow_rate         = "CAPPL:LOCAL.L_ertrag[0].durchflussmenge"
+solar_power_current     = "CAPPL:LOCAL.L_ertrag[0].leistung_aktuell"
+solar_power_day         = "CAPPL:LOCAL.ertrag[0].leistung_tag"
+solar_power_total       = "CAPPL:LOCAL.ertrag[0].leistung_gesamt"
+boiler_temp             = "CAPPL:FA[0].L_kesseltemperatur"
+burner_temp             = "CAPPL:FA[0].L_abgastemperatur"
+burner_hours		= "CAPPL:FA[0].L_brennerlaufzeit_anzeige"
+burner_starts		= "CAPPL:FA[0].L_brennerstarts"
+burner_ignitions	= "CAPPL:FA[0].L_anzahl_zuendung"
+

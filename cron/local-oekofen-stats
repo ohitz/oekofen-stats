@@ -1,0 +1,1 @@
+*/5 * * * * root /usr/local/oekofen-stats/update-stats.sh > /dev/null 2>&1
