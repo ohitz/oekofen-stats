@@ -1,6 +1,10 @@
 oekofen-stats
 =============
 
+OLD VERSION: Does "screen scraping" on the ÖkoFEN web
+interface. Superseded by a version which uses the internal log
+generatd by the the controller.
+
 Simple scripts to fetch statistics from a ÖkoFEN Pellematic Smart
 solar pellet heating connected to our LAN.
 
