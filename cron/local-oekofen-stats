@@ -1,1 +1,1 @@
-*/5 * * * * root /usr/local/oekofen-stats/update-stats.sh > /dev/null 2>&1
+*/5 * * * * root /usr/local/oekofen-stats/fetch-log.pl > /dev/null 2>&1
