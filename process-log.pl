@@ -187,8 +187,9 @@ rrd_commit($hc_pump);
 rrd_commit($hc_flow_temp_actual);
 rrd_commit($hc_flow_temp_nominal);
 
-#create_graphs("-7 days", "now", "");
 create_graphs("-24 hours", "now", "");
+create_graphs("-7 days", "now", ".7d");
+create_graphs("-30 days", "now", ".30d");
 
 #formatTexts: " Dauerlauf|Start|Zuendung|Softstart|Leistungsbrand|Nachlauf|Aus|Saugen|! Asche !|! Pellets !|Pell Switch|StÃ¶rung|Einmessen|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|Aus|Aus|Aus|Aus|Aus"
 
