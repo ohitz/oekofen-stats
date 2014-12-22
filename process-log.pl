@@ -363,6 +363,7 @@ sub create_graphs
   $cmd = sprintf("rrdtool graph %s/solar%s.png ".
                  "-w 800 -h 120 ".
                  "-l 0 -u 100 ".
+                 "--rigid ".
                  "--start '%s' ".
                  "--end '%s' ".
                  "--vertical-label 'Temperature °C' ".
