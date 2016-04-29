@@ -69,9 +69,9 @@ foreach my $file (@files) {
   if (-f "$csvdir/$file") {
     debug("Log file %s exists, checking last row now.\n", $file);
 
-    # The file exists. Now load the last line to check which day it
-    # refers to. It should refer to the first minute of the next
-    # day. If it doesn't, this means that the file is not complete yet
+    # The file exists. Now load the last line to check which day it refers to.
+    # It should refer to the last minute of the day or to the first minute of
+    # the next day. If it doesn't, this means that the file is not complete yet
     # and should be downloaded.
 
     open my $fh, "<", "$csvdir/$file"
@@ -98,6 +98,10 @@ foreach my $file (@files) {
 
       # Convert date and time to seconds since unix epoch
       my $time = timelocal POSIX::strptime($data->{"date"}." ".$data->{"time"}, '%d.%m.%Y %H:%M:%S');
+
+      # Add 1 minute (in case the file refers to the last minute of 
+      # the day).
+      $time += 60;
 
       # Convert to YYYYMMDD.
       my $date = time2str("%Y%m%d", $time);
